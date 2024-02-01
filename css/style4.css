@@ -165,3 +165,54 @@ header {
 .swiper-slide-prev.swiper-slide-visible {
   transform: translate3d(0, 0, 0) rotateY(0);
 }
+
+/* Animation */
+
+.swiper-container {
+  margin-top: 20%;
+  width: 100%;
+  height: 500px;
+  /* height: 200px; */
+}
+
+.swiper-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.swiper-slide-active,
+.swiper-slide-next,
+.swiper-slide-prev {
+  z-index: 1;
+}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+  transform: translate3d(0, 0, -20px) rotateY(-10deg);
+}
+
+.swiper-slide-next {
+  transform: translate3d(0, 100%, 0) rotateY(-10deg);
+}
+
+.swiper-slide-prev {
+  transform: translate3d(0, -100%, 0) rotateY(-10deg);
+}
+
+.swiper-slide-next.swiper-slide-visible {
+  transform: translate3d(0, 0, 0) rotateY(0);
+}
+
+.swiper-slide-prev.swiper-slide-visible {
+  transform: translate3d(0, 0, 0) rotateY(0);
+}
+
+/* Fullpage */
+
+.fp-watermark {
+  display: none;
+}
