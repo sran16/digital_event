@@ -62,8 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-openPopup();
 // nav
 
 // Affichage du menu mobile
