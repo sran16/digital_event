@@ -156,16 +156,41 @@ header {
 .basic-section {
   background-color: var(--green);
 }
-/* .popup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 50px;
-  position: absolute;
-  top: 80%;
-  left: 80%;
-} */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
+.popup-content {
+  position: absolute;
+  top: 91%;
+  left: 92.5%;
+  background-color: var(--white);
+  border-radius: 20px 0px 0px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup img {
+  max-width: 100%;
+  height: auto;
+}
+.btn-popup {
+  border: solid 1px var(--white);
+  background-color: white;
+  padding: 0.6rem;
+  width: 225px;
+  font-size: 16px;
+  font-family: "bahnschrift", sans-serif;
+}
+.btn-popup a {
+  color: black;
+}
 /* 2  */
 .events-section {
   display: flex;
@@ -398,6 +423,17 @@ footer li a {
     height: auto;
     transition: transform 0.3s ease;
   }
+
+  .popup-content {
+    position: absolute;
+    top: 87%;
+    left: 67.5%;
+    background-color: var(--white);
+    border-radius: 20px 0px 0px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
   .center-image {
     position: absolute;
     top: 37px;
@@ -419,6 +455,8 @@ footer li a {
     height: 549px;
     padding-top: 100px;
     padding-bottom: 100px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
   .swiper-slide {
     display: flex;

@@ -70,3 +70,9 @@ function toggleMenu() {
     navbar.className = "navbar";
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var popup = document.getElementById("popup");
+
+  popup.style.display = "block";
+});
