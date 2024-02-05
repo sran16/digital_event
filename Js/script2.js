@@ -60,6 +60,30 @@ document.addEventListener("DOMContentLoaded", function () {
       slideShadows: false,
     },
   });
+  // when the last slide is reached
+  swiper.on("reachEnd", function () {
+    console.log("Reached the end of the slider");
+    // scrolls 100px down
+    // window.scrollBy(0, 400);
+
+    // scroll to the next section
+    window.scrollTo({
+      top: 400,
+      behavior: "smooth",
+    });
+
+  });
+  swiper.on("reachBeginning", function () {
+    console.log("Reached the top of the slider");
+
+    //  slowly scrolls 200 px up
+    // window.scrollBy(0, -400);
+
+     window.scrollTo({
+       top: -400,
+       behavior: "smooth",
+     });
+  });
 });
 
 // nav
