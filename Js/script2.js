@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     effect: "cards",
     direction: "vertical",
     slidesPerView: 1,
-    loop: true,
+    loop: false,
     spaceBetween: 10,
     mousewheel: true,
     pagination: {
@@ -62,23 +62,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-function toggleMenu() {
-  var navbar = document.getElementById("mobile-navbar");
-  if (navbar.className === "navbar") {
-    navbar.className += " responsive";
-  } else {
-    navbar.className = "navbar";
-  }
-}
 
-document.addEventListener("DOMContentLoaded", function () {
-  var popup = document.getElementById("popup");
-  var spaceSection = document.querySelector(".space-section");
+openPopup();
+// nav
 
-  if (spaceSection.contains(popup)) {
-    popup.style.display = "block";
-  } else {
-    popup.style.display = "none";
-  }
+// Affichage du menu mobile
+const button = document.getElementById("menu-btn");
+const menu = document.getElementById("mobile-links");
+// console.log(menu);
+button.addEventListener("click", () => {
+  menu.classList.toggle("mobile-navbar-links-open");
 });
-

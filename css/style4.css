@@ -9,6 +9,8 @@ body {
   padding: 0;
   color: var(--white);
   font-family: "bahnschrift", sans-serif;
+  overflow: hidden;
+  overflow-y: auto;
 }
 main {
   margin: 0;
@@ -157,13 +159,12 @@ header {
   background-color: var(--green);
 }
 .popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
+  position: absolute;
+  margin-top: 72%;
+  right: -16px;
+  width: 488px;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
 .popup-content {
@@ -388,7 +389,7 @@ footer li a {
   list-style: none;
 }
 /* Moblie  */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   body {
     margin: 0;
     padding: 0;
@@ -400,11 +401,88 @@ footer li a {
     flex-direction: row-reverse;
     padding-top: 20px;
   }
-  #MenuItems-mobile {
+  /* #MenuItems-mobile {
     display: none;
-  }
+  } */
   .navbar {
     display: none;
+  }
+  nav#mobile-navbar {
+    z-index: 999999;
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 60px;
+  }
+
+  .mobile-navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .mobile-navbar-header-logo {
+    padding: 0px 20px 0px 20px;
+  }
+
+  .mobile-navbar-header-logo #logo a {
+    /* color: black; */
+    text-decoration: none;
+  }
+
+  .mobile-navbar-header-close {
+    padding: 0px 20px 0px 20px;
+    width: fit-content;
+  }
+
+  .mobile-navbar-header-close button {
+    margin: 50px;
+    padding: 10px 20px 10px 20px;
+    background-color: transparent;
+  }
+
+  .mobile-navbar-links {
+    display: none;
+  }
+
+  .mobile-navbar-links-open {
+    display: block;
+    background-color: var(--darkblue);
+    color: white;
+    width: 60vw;
+    height: auto;
+    position: fixed;
+    right: 20px;
+  }
+
+  #mobile-links ul {
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    height: 100%;
+    padding: 0;
+  }
+
+  #mobile-links ul li {
+    list-style: none;
+    width: fit-content;
+    height: 100%;
+    padding: 20px 0px 20px 20px;
+    text-align: left;
+  }
+
+  #mobile-links ul li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .site-links,
+  .legal {
+    border-bottom: #000000 dashed 1.5px;
   }
   .burger-menu img {
     width: 24px;
@@ -440,7 +518,6 @@ footer li a {
     top: 37px;
     right: 0%;
     width: 100%;
-    /* height: fit-content; */
     rotate: 8deg;
     transition: transform 0.2s ease;
   }
@@ -451,9 +528,10 @@ footer li a {
     transition: transform 0.3s ease;
   }
   .swiper-container {
+    margin: 0;
     margin-top: 27px;
     /* width: 100%; */
-    height: 549px;
+    height: 608px;
     padding-top: 100px;
     padding-bottom: 100px;
     padding-right: 0px;
@@ -467,8 +545,8 @@ footer li a {
   }
   .swiper-slide .ticket-detail1 {
     color: black;
-    width: 355px;
-    height: 100%;
+    width: 418px;
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
