@@ -8,61 +8,219 @@
       content="Le site musée de l’ESD, l’École Supérieure du Digital, regroupe les Digital Event des années précédentes. L'événement annuel de l’école réunit toutes les promotions, pour mettre en lumière les dernières avancées techniques et les compétences des élèves."
     />
     <title>ESD Digital Event</title>
-    <link rel="icon" href="img/esd-logo-responsive-blanc.png" />
+    <link
+      rel="icon"
+      href="img/esd-logo-responsive-blanc.png"
+      class="icon-head"
+    />
 
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.min.css"
+      integrity="sha512-i5IHYtHBVvbgT6M4ltVKNqF7fh/MTVfGh3ilW1gxxgmlMocsl8aYz28aF0Iph+ceUpun06UW9CpExog9qXqFKQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <link rel="stylesheet" href="css/style4.css" />
   </head>
+
   <body>
-    <section class="space-section">
-      <header>
-        <div class="navbar">
-          <div>
-            <a href="index.html"><img src="img/logo.png" class="logo" /></a>
+    <main id="fullpage">
+      <section class="space-section section active">
+        <!-- Desktop -->
+        <header>
+          <div class="navbar">
+            <div>
+              <a href="index.html"
+                ><img src="img/logo-white.png" class="logo"
+              /></a>
+            </div>
+            <nav>
+              <ul id="MenuItems">
+                <li><a href="index.html">Digital Event 2024</a></li>
+                <li><a href="event.html">Evénements passés</a></li>
+                <li><a href="event.html">Nos formations</a></li>
+              </ul>
+            </nav>
           </div>
-          <nav>
-            <ul id="MenuItems">
-              <li><a href="index.html">Digital Event 2024</a></li>
-              <li><a href="event.html">Evènements passés</a></li>
-              <li><a href="event.html">Nos formations</a></li>
-              <button class="btn-reservation">S'inscrire à la Diginight</button>
-            </ul>
-          </nav>
+          <!-- Moblie Navbar -->
+          <div class="mobile-navbar">
+            <div class="burger-menu"><img src="img/menu burger.png" /></div>
+            <nav>
+              <ul id="MenuItems-mobile">
+                <li><a href="index.html">Digital Event 2024</a></li>
+                <li><a href="event.html">Evénements passés</a></li>
+                <li><a href="event.html">Nos formations</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <div class="container-space">
+          <h1 class="section1">2024</h1>
+          <img
+            id="img-tilt"
+            src="img/tickets/Ticket-2024.png"
+            alt="2024-ticket"
+            class="center-image"
+          />
+          <div class="section2">
+            <h2>Paris</h2>
+            <p>
+              Le Digital Event est un événement de l’ESD d’une durée de 10 jours
+              pendant laquelle les étudiants imaginent et conçoivent des
+              ateliers autour d’un thème, cette année c’est “L’espace”. Cet
+              événement se conclu par une soirée événement (la Diginight) durant
+              laquelle les élèves présentent leurs projets au public.
+            </p>
+            <button class="btn-diginight">Découvrir</button>
+          </div>
+          <!-- <div class="popup">
+            <img src="img/popup/popup-img.png" class="img-diginight" />
+            <p>S'inscrire à la Diginight</p>
+          </div> -->
         </div>
-      </header>
-      <div class="container-space">
-        <h1 class="section1">2024</h1>
-        <img
-          id="img-tilt"
-          src="img/tickets/Ticket-2024.png"
-          alt="2024-ticket"
-          class="center-image"
-        />
-        <div class="section2">
-          <h2><strong>Paris</strong></h2>
+      </section>
+
+      <!-- Tickets -->
+      <section class="events-section section">
+        <div class="swiper-container" id="mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/tickets/Ticket 2023.png" alt="digital-event-2023" />
+              <div class="ticket-detail1">
+                <h2>2023- Flashback</h2>
+                <p>
+                  En 2023, les étudiants de l'ESD Paris ont travaillé autour du
+                  thème "Flashback". L’objectif était d’inviter le public à se
+                  replonger dans les années 80-90. Une soirée expérientielle et
+                  immersive où le public a pu découvrir l’univers du digital
+                  revisité avec les années 80-90.
+                </p>
+                <button class="btn-catalogue">
+                  <a href="https://esd-digital-event.com/2023/">Découvrir</a>
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/tickets/Ticket 2022.png" alt="digital-event-2022" />
+              <div class="ticket-detail1">
+                <h2>2022- Rethink</h2>
+                <p>
+                  Le Digital Event de 2022 a réuni les élèves de l’ESD Paris
+                  autour du thème Rethink (repenser). Le but était de repenser
+                  les choses et donc de repenser nos usages avec les
+                  technologies pour voir le monde qui nous entoure avec un œil
+                  neuf.
+                </p>
+                <button class="btn-catalogue">
+                  <a href="https://www.archives.esd-digital-event.com/2022/"
+                    >Découvrir</a
+                  >
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/tickets/Ticket 2021.png" alt="digital-event-2021" />
+              <div class="ticket-detail1">
+                <h2>2021- Le Lien</h2>
+                <p>
+                  En 2021, les étudiants de l’ESD Paris ont travaillés sur le
+                  thème “Le Lien”. Avec la crise sanitaire, les élèves ont
+                  réfléchi à des réalisations collaboratives autour de la notion
+                  de lien afin que, malgré la distance, tous puissent se
+                  rassembler.
+                </p>
+                <button class="btn-catalogue">
+                  <a href="https://www.archives.esd-digital-event.com/2021"
+                    >Découvrir</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- Formation -->
+
+      <section class="formation section">
+        <div class="formation-contain">
+          <img src="img/tickets/Ticket.png" alt="ticket-main" class="img-imp" />
+        </div>
+        <div class="formation-detail">
+          <h3>Nos formations</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur. Convallis arcu nulla egestas
-            sed amet. Rhoncus justo enim sed commodo adipiscing nec sagittis
-            quis. Vitae lacus non tristique massa.
+            Présente dans cinq villes françaises, l'ESD propose une gamme variée
+            de formations avec quatre bachelors couvrant le marketing digital,
+            la création, le développement web et un cycle intensif, ainsi que
+            sept mastères spécialisés. Découvrez l'ESD et plongez dans le monde
+            passionnant du numérique dès aujourd'hui !
           </p>
-          <button class="btn-catalogue">Voir plus</button>
+          <button class="btn-formation">Découvrir nos formations</button>
         </div>
-      </div>
-    </section>
-    <section class="basic-section">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="img/tickets/Ticket-2024.png" alt="ticket 2023" /></div>
-          <div class="swiper-slide"><img src="img/tickets/Ticket-2024.png" alt="ticket 2022" /></div>
-          <div class="swiper-slide"><img src="img/tickets/Ticket-2024.png" alt="ticket 2021"/></div>
+      </section>
+
+      <footer>
+        <div class="footer-content">
+          <div class="top-footer">
+            <div class="footer-section">
+              <h4>Nos campus</h4>
+              <div class="footer-spacer1">
+                <li>Paris</li>
+                <li>Lyon</li>
+                <li>Bordeaux</li>
+                <li>Toulouse</li>
+                <li>Nantes</li>
+              </div>
+            </div>
+            <div class="footer-section">
+              <h4>Suivez-nous</h4>
+              <div class="footer-spacer2">
+                <li>
+                  <a href="#"><img src="img/links/Youtube.png" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="img/links/Twitter.png" /></a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/esd_ecole/"
+                    ><img src="img/links/Instagram.png"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="img/links/Facebook.png" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="img/links/Linkedin.png" /></a>
+                </li>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <ul class="footer-spacer3">
+              <li><a href="#">Mentions légales</a></li>
+              <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
+      </footer>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.min.js"
+      integrity="sha512-yHHLi2ZwgtW9QNVZd0asqMyWGJ6Kx73ijKlGWSi3MwYFB5ZzOJV8wPtopKr6muHk5SERgF3OB/2dZj3StlI34w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="Js/script2.js"></script>
   </body>
 </html>
