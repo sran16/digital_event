@@ -495,8 +495,8 @@ footer li a {
 
   .space-section {
     padding: 3%;
-    height: 97vh;
-    /* width: 100vw; */
+    height: 100vh;
+  
   }
   .container-space {
     display: flex;
