@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // when the last slide is reached
   swiper.on("reachEnd", function () {
     console.log("Reached the end of the slider");
-    // scrolls 100px down
+    // slowly scrolls 200 px down
     // window.scrollBy(0, 400);
 
     // scroll to the next section
@@ -71,18 +71,16 @@ document.addEventListener("DOMContentLoaded", function () {
       top: 400,
       behavior: "smooth",
     });
-
   });
-  swiper.on("reachBeginning", function () {
-    console.log("Reached the top of the slider");
+  // swiper.on("reachBeginning", function () {
+  //   console.log("Reached the top of the slider");
 
-    //  slowly scrolls 200 px up
-    // window.scrollBy(0, -400);
+  //   //  slowly scrolls 200 px up
+  //   // window.scrollBy(0, -400);
 
-     window.scrollTo({
-       top: -400,
-       behavior: "smooth",
-     });
+  window.scrollTo({
+    top: -400,
+    behavior: "smooth",
   });
 });
 

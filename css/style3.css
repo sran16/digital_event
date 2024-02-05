@@ -1,0 +1,69 @@
+/* Générique ------------------ */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Typographique ------------------ */
+@font-face {
+  font-family: "bahnschrift";
+  src: url(./font/bahnschrift.ttf) format("truetype");
+  src: url(./font/bahnschrift.woff) format("woff");
+  src: url(./font/bahnschrift.woff2) format("woff2");
+  font-family: "ShareTechMono-Regular";
+  src: url(./font/ShareTechMono-Regular.ttf) format("truetype");
+  src: url(./font/ShareTechMono-Regular.woff) format("woff");
+  src: url(./font/ShareTechMono-Regular.woff2) format("woff2");
+}
+
+/* Corps de la page ------------------ */
+
+body {
+  font-family: "bahnschrift", sans-serif;
+  margin: 0;
+  font-size: 14px;
+
+  height: 100vh;
+  color: #181434;
+}
+
+.bg-image {
+  background-image: url("../img/logo-esd-gris.svg");
+  opacity: 0.6;
+  position: fixed;
+  background-position: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+#tva {
+  margin: 30px 0;
+}
+.spacer {
+  margin: 30px 0;
+}
+
+main {
+  padding: 10px 120px;
+}
+h1 {
+  margin: 25px 0;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 10px;
+  }
+}
+a {
+  color: rgba(0, 0, 0, 0.718);
+  margin-bottom: 10px;
+}
+h3 {
+  margin: 10px 0;
+}

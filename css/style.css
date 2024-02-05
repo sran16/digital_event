@@ -160,7 +160,7 @@ header {
 }
 .popup {
   position: absolute;
-  margin-top: 72%;
+  margin-top: 70.5%;
   right: -16px;
   width: 488px;
   height: auto;
@@ -495,14 +495,15 @@ footer li a {
 
   .space-section {
     padding: 3%;
-    width: 100vw;
+    height: 97;
+    /* width: 100vw; */
   }
   .container-space {
     display: flex;
   }
   .section2 {
     position: absolute;
-    margin-top: 220%;
+    margin-top: 208%;
     left: -1px;
     width: 357px;
     height: auto;
@@ -510,8 +511,8 @@ footer li a {
   }
   .popup {
     position: absolute;
-    margin-top: 300%;
-    right: -36px;
+    margin-top: 307%;
+    right: -58px;
     transition: transform 0.3s ease;
   }
   .popup-content {
@@ -596,7 +597,8 @@ footer li a {
   .footer-bottom {
     display: flex;
     justify-content: center;
-    align-items: center;}
+    align-items: center;
+  }
   .footer-spacer1 {
     display: flex;
     gap: 10px;
