@@ -73,6 +73,12 @@ function toggleMenu() {
 
 document.addEventListener("DOMContentLoaded", function () {
   var popup = document.getElementById("popup");
+  var spaceSection = document.querySelector(".space-section");
 
-  popup.style.display = "block";
+  if (spaceSection.contains(popup)) {
+    popup.style.display = "block";
+  } else {
+    popup.style.display = "none";
+  }
 });
+
