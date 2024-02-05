@@ -511,7 +511,7 @@ footer li a {
   }
   .popup {
     position: absolute;
-    margin-top: 307%;
+    margin-top: 300%;
     right: -58px;
     transition: transform 0.3s ease;
   }
