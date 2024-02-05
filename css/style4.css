@@ -383,15 +383,64 @@ footer li a {
   .burger-menu img {
     width: 24px;
   }
+
+  .space-section {
+    padding: 20px;
+  }
   .container-space {
     display: flex;
-    flex-direction: column;
+  }
+  .section2 {
+    position: absolute;
+    margin-top: 220%;
+    left: -1px;
+    width: 357px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  .center-image {
+    position: absolute;
+    top: 37px;
+    right: 0%;
+    width: 100%;
+    height: fit-content;
+    rotate: 8deg;
+    transition: transform 0.2s ease;
+  }
+  .section1 {
+    position: absolute;
+    left: 7%;
+    margin: 0;
+    transition: transform 0.3s ease;
+  }
+  .swiper-container {
+    margin-top: 27px;
+    /* width: 100%; */
+    height: 549px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   .swiper-slide {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .swiper-slide .ticket-detail1 {
+    color: black;
+    width: 355px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 2);
+    padding: 0;
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.495);
+    z-index: 1;
   }
   .formation {
     display: flex;
