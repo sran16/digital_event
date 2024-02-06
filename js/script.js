@@ -118,6 +118,8 @@ function checkCookieConsent() {
     }, 2000);
     document.body.style.overflow = "hidden";
   } else {
+    const cookieDiv = document.getElementById("cookies");
+    cookieDiv.style.display = "none";
     document.body.style.overflow = "hidden";
     const googleAnalyticsLink = document.createElement("script");
     const head = document.querySelector("head");
@@ -133,4 +135,6 @@ function checkCookieConsent() {
   }
 }
 
-window.onload = checkCookieConsent();
+window.addEventListener("load", (event) => {
+  checkCookieConsent();
+});
