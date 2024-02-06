@@ -57,7 +57,7 @@ li a {
 }
 /* First section */
 .space-section {
-  background-image: url(../img/background/space-section.png);
+  background-image: url(../images/background/space-section.png);
   height: 100vh;
   padding: 0px 80px 0px 80px;
   background-size: cover;
@@ -555,7 +555,7 @@ footer li a {
 
   .space-section {
     padding: 3%;
-    height: 100vh;
+    min-height: 100vh;
   }
   .container-space {
     display: flex;
