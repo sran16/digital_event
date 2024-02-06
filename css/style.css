@@ -627,19 +627,19 @@ footer li a {
     z-index: 1;
   }
   .formation {
+    gap: 20px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     min-height: 58vh;
   }
   .formation-detail {
     /* padding-left: 0; */
     width: 91%;
     padding-right: 19px;
-
   }
-  .formation-detail h2{
+  .formation-detail h2 {
     font-size: 40px;
   }
   .formation-contain {
@@ -673,7 +673,7 @@ footer li a {
   }
   .top-footer {
     flex-direction: column;
-    padding: 30px;
+    padding: 0px 30px 30px 30px;
   }
   .footer-spacer3 {
     justify-content: center;
