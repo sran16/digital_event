@@ -99,7 +99,7 @@ function acceptCookies() {
   googleAnalyticsLink.setAttribute("async", "");
   googleAnalyticsLink.setAttribute(
     "src",
-    "https://www.googletagmanager.com/gtag/js?id=G-W694R24V49"
+    "https://www.googletagmanager.com/gtag/js?id=G-MMCBGZX4DZ"
   );
   head.appendChild(googleAnalyticsLink);
   head.appendChild(googleAnalyticsScript);
@@ -126,15 +126,11 @@ function checkCookieConsent() {
     googleAnalyticsLink.setAttribute("async", "");
     googleAnalyticsLink.setAttribute(
       "src",
-      "https://www.googletagmanager.com/gtag/js?id=G-W694R24V49"
+      "https://www.googletagmanager.com/gtag/js?id=G-MMCBGZX4DZ"
     );
     head.appendChild(googleAnalyticsLink);
     head.appendChild(googleAnalyticsScript);
   }
 }
 
-window.onload = (event) => {
-  // getDynamicTime();
-  // getDatas();
-  checkCookieConsent();
-};
+window.onload = checkCookieConsent();

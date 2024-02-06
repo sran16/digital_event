@@ -163,6 +163,7 @@ header {
   background-color: var(--green);
 }
 .popup {
+  display: none;
   position: absolute;
   margin-top: 75.2%;
   right: -16px;
