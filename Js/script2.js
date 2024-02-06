@@ -14,7 +14,7 @@ function animateTicket() {
 }
 animateTicket();
 
- // Animation formation section ticket 
+// Animation formation section ticket
 gsap.to(".formation-contain", {
   duration: 2.5,
   // ease: "steps(6)",
@@ -27,7 +27,7 @@ gsap.to(".formation-contain", {
     // scrub: true,
   },
 });
-// swiper tickets 
+// swiper tickets
 document.addEventListener("DOMContentLoaded", function () {
   const swiper = new Swiper("#mySwiper", {
     effect: "cards",
@@ -35,7 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 1,
     loop: false,
     spaceBetween: 10,
-    mousewheel: true,
+    mousewheel: {
+      forceToAxis: true,
+      sensitivity: 1,
+      releaseOnEdges: true,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -46,25 +50,28 @@ document.addEventListener("DOMContentLoaded", function () {
       slideShadows: false,
     },
   });
-  // when the last slide is reached
-  swiper.on("reachBeginning", function () {
-    console.log("Reached the top of the slider");
-    window.scrollTo({
-      top: 400,
-      behavior: "smooth",
-    });
-  });
-  swiper.on("reachEnd", function () {
-    console.log("Reached the end of the slider");
-    window.scrollBy({
-      top: 1000,
-      behavior: "smooth",
-    });
-  });
 });
+// when the last slide is reached
+//   swiper.on("reachBeginning", function () {
+//     console.log("Reached the top of the slider");
+//     window.scrollTo({
+//       top: 400,
+//       behavior: "smooth",
+//     });
+//   });
+//   swiper.on("reachEnd", function () {
+//     console.log("Reached the end of the slider");
+//    setTimeout(() => {
+//      console.log("Retardée d'une seconde.");
+//    }, "15000");
+//     window.scrollBy({
+//       top: 400,
+//       behavior: "smooth",
+//     });
+//   });
+// });
 
 // nav
-
 
 const button = document.getElementById("menu-btn");
 const menu = document.getElementById("mobile-links");
