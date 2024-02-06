@@ -1,4 +1,4 @@
-// Animation
+// Animation first section img
 function animateTicket() {
   const ticket = document.getElementById("img-tilt");
   document.addEventListener("mousemove", function (e) {
@@ -9,29 +9,15 @@ function animateTicket() {
     const boxShadowY = (e.pageY - window.innerHeight) / 800;
     const boxShadowBlur = Math.abs(xAxis) + Math.abs(yAxis);
 
-    ticket.style.boxShadow = `${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px white`;
+    ticket.style.boxShadow = `${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px #262424`;
   });
 }
 animateTicket();
 
-// const imageImp = document.querySelector(".img-imp");
-
-// imageImp.addEventListener("mouseenter", () => {
-//   TweenMax.to(".img-imp", 3, {
-//     x: "+60%",
-//     ease: "steps(6)",
-//     opacity: 1,
-//     // scrollTrigger: {
-//     //   trigger: ".formation",
-//     //   start: "top 90%",
-//     //   end: "bottom 20%",
-//     //   markers: true,
-//     // },
-//   });
-// });
+ // Animation formation section ticket 
 gsap.to(".formation-contain", {
   duration: 2.5,
-  ease: "steps(6)",
+  // ease: "steps(6)",
   x: "+105%",
   scrollTrigger: {
     trigger: ".formation-contain",
@@ -41,7 +27,7 @@ gsap.to(".formation-contain", {
     // scrub: true,
   },
 });
-
+// swiper tickets 
 document.addEventListener("DOMContentLoaded", function () {
   const swiper = new Swiper("#mySwiper", {
     effect: "cards",
@@ -61,35 +47,87 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
   // when the last slide is reached
-  swiper.on("reachEnd", function () {
-    console.log("Reached the end of the slider");
-    // slowly scrolls 200 px down
-    // window.scrollBy(0, 400);
-
-    // scroll to the next section
+  swiper.on("reachBeginning", function () {
+    console.log("Reached the top of the slider");
     window.scrollTo({
       top: 400,
       behavior: "smooth",
     });
   });
-  // swiper.on("reachBeginning", function () {
-  //   console.log("Reached the top of the slider");
-
-  //   //  slowly scrolls 200 px up
-  //   // window.scrollBy(0, -400);
-
-  window.scrollTo({
-    top: -400,
-    behavior: "smooth",
+  swiper.on("reachEnd", function () {
+    console.log("Reached the end of the slider");
+    window.scrollBy({
+      top: 1000,
+      behavior: "smooth",
+    });
   });
 });
 
 // nav
 
-// Affichage du menu mobile
+
 const button = document.getElementById("menu-btn");
 const menu = document.getElementById("mobile-links");
-// console.log(menu);
+
 button.addEventListener("click", () => {
   menu.classList.toggle("mobile-navbar-links-open");
 });
+
+//cookies
+let popup = document.getElementById("cookies");
+
+function declineCookies() {
+  popup.style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+function acceptCookies() {
+  // Enregistrer le consentement de l'utilisateur dans un cookie
+  localStorage.setItem("cookieAccepted", "yes");
+  popup.style.display = "none";
+  const googleAnalyticsLink = document.createElement("script");
+  const head = document.querySelector("head");
+  const googleAnalyticsScript = document.createElement("script");
+  googleAnalyticsScript.setAttribute("src", "./js/analytics.js");
+  googleAnalyticsLink.setAttribute("async", "");
+  googleAnalyticsLink.setAttribute(
+    "src",
+    "https://www.googletagmanager.com/gtag/js?id=G-W694R24V49"
+  );
+  head.appendChild(googleAnalyticsLink);
+  head.appendChild(googleAnalyticsScript);
+  document.body.style.overflow = "auto";
+}
+
+// Vérifier si l'utilisateur a déjà consenti aux cookies
+function checkCookieConsent() {
+  var consentCookie = localStorage.getItem("cookieAccepted");
+  if (consentCookie != "yes") {
+    setTimeout(function () {
+      const popup = document.getElementById("popup");
+      popup.style.display = "flex";
+      popup.style.flexDirection = "column";
+      popup.style.justifyContent = "space-evenly";
+    }, 2000);
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "hidden";
+    const googleAnalyticsLink = document.createElement("script");
+    const head = document.querySelector("head");
+    const googleAnalyticsScript = document.createElement("script");
+    googleAnalyticsScript.setAttribute("src", "./js/analytics.js");
+    googleAnalyticsLink.setAttribute("async", "");
+    googleAnalyticsLink.setAttribute(
+      "src",
+      "https://www.googletagmanager.com/gtag/js?id=G-W694R24V49"
+    );
+    head.appendChild(googleAnalyticsLink);
+    head.appendChild(googleAnalyticsScript);
+  }
+}
+
+window.onload = (event) => {
+  // getDynamicTime();
+  // getDatas();
+  checkCookieConsent();
+};
