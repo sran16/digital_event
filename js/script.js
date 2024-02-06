@@ -120,7 +120,6 @@ function checkCookieConsent() {
   } else {
     const cookieDiv = document.getElementById("cookies");
     cookieDiv.style.display = "none";
-    document.body.style.overflow = "hidden";
     const googleAnalyticsLink = document.createElement("script");
     const head = document.querySelector("head");
     const googleAnalyticsScript = document.createElement("script");
