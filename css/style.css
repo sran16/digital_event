@@ -9,6 +9,7 @@ body {
   padding: 0;
   color: var(--white);
   font-family: "bahnschrift", sans-serif;
+  background-color: black;
   /* overflow: hidden;
   overflow-y: auto; */
 }
@@ -201,6 +202,7 @@ header {
   align-items: center;
   height: 70vh;
   padding: 100px;
+  background-color: var(--white);
   /* background-color: var(--green); */
 }
 .section2 h3 {
@@ -592,7 +594,7 @@ footer li a {
   }
   .swiper-container {
     margin: 0;
-    height: 60vh;
+    height: 68vh;
   }
   .swiper-slide {
     display: flex;
