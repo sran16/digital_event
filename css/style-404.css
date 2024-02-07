@@ -28,11 +28,11 @@ p {
 
 .colonneGauche {
   padding-left: 5%;
-  width: 80%;
+  /* width: 80%; */
 }
 
 .Ticket404 {
-  width: 80%;
+  width: 85%;
   transform: rotate(-10deg);
 }
 
@@ -52,6 +52,10 @@ button {
   width: 51%;
   font-size: 16px;
   margin-top: 8px;
+}
+button a {
+  text-decoration: none;
+  color: white;
 }
 button:hover {
   border: solid 1px #00c4b3;
@@ -79,7 +83,7 @@ button:hover {
 @media screen and (max-width: 800px) {
   .colonneGauche {
     width: 87%;
-    margin-bottom: 40px;  
+    margin-bottom: 40px;
     padding: 0;
   }
   .sectionError {
