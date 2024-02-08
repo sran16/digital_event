@@ -336,7 +336,6 @@ footer {
   padding-left: 150px;
 }
 
-
 .top-footer {
   display: flex;
   justify-content: space-between;
@@ -634,6 +633,7 @@ footer li a {
     /* padding-left: 0; */
     width: 91%;
     padding-right: 19px;
+    min-height: 39vh;
   }
   .formation-detail h2 {
     font-size: 40px;
